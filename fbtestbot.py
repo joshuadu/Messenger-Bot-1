@@ -31,11 +31,13 @@ def handle_messages():
                     recipient_id = messaging_event["recipient"]["id"]
                     message_text = messaging_event["message"]["text"]
 
+                    """
                     nums = [int(s) for s in message_text.split() if s.isdigit()]
                     sum, i  = 0, 0
                     while i < nums.length:
                         sum += nums[i]
                         i += 1
+                    """
 
                     #message_back = "How are you?"
                     #if message_text == "Hi":
@@ -43,7 +45,7 @@ def handle_messages():
 
 
                     #create another class that can handle how to send messages? 
-                    send_message(sender_id, sum) #sends back a message 
+                    send_message(sender_id, "hi") #sends back a message 
 
                 if messaging_event.get("delivery"):
                     pass
