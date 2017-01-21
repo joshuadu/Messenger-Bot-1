@@ -13,7 +13,7 @@ class Handler:
 			answer = "Not solvable, please try again"
 		return answer
 
-	def eval_text(self):
+	def math_eval_text(self):
 		symbols = '^*()/+-'
 		formula = [(x,self.text.index(x)) for x in self.text if x in string.digits+symbols]
 		result = eval(''.join(x[0] for x in formula), {'__builtins__':None})
@@ -22,7 +22,7 @@ class Handler:
 	def process(self):
 		nums = [int(s) for s in self.text.split() if s.isdigit()]
 		if nums:
-			return self.eval_text()
+			return self.math_eval_text()
 		else:
 			return "enter an expression please"
 
