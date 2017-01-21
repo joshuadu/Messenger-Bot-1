@@ -45,12 +45,16 @@ def handle_messages():
 
 
                     #create another class that can handle how to send messages? 
+                    """
                     nums = [int(s) for s in message_text.split() if s.isdigit()]
                     answer = 0
                     i = 0
                     while i < len(nums):
                         answer += nums[i]
                         i += 1
+                    """
+                    calculator = Handler(message_text)
+                    answer = calculator.sum_from_text()
                     send_message(sender_id, answer) #sends back a message 
 
                 if messaging_event.get("delivery"):
