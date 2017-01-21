@@ -4,6 +4,7 @@ import sys
 import os
 import json
 from Credentials import *
+from testmsghandler import *
 
 app = Flask(__name__)
 
