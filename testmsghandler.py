@@ -21,7 +21,11 @@ class Handler:
 
 
 	def process(self):
-		return self.eval_text()
+		nums = [int(s) for s in self.text.split() if s.isdigit()]
+		if nums:
+			return self.eval_text()
+		else:
+			return "enter an expression please"
 
 	def __init__(self, str):
 		self.text = str
