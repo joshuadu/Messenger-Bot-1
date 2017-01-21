@@ -5,7 +5,7 @@ import os
 import json
 from Credentials import *
 from testmsghandler import *
-from websitetester import *
+#from websitetester import *
 
 app = Flask(__name__)
 
