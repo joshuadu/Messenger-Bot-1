@@ -5,7 +5,6 @@ import os
 import json
 from Credentials import *
 from testmsghandler import *
-from websitetester import *
 
 app = Flask(__name__)
 
@@ -55,12 +54,6 @@ def handle_messages():
                         answer += nums[i]
                         i += 1
                     """
-                    """
-                    if message_text[0] == '@':
-                        send_message(sender_id, twitter_test(message_text[1:]))
-                    else:
-                    """
-
                     handler = Handler(message_text)
                     answer = handler.process()
                     send_message(sender_id, answer) #sends back a message 
