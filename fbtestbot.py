@@ -35,6 +35,7 @@ def handle_messages():
                     sum, i  = 0, 0
                     while i < nums.length:
                         sum += nums[i]
+                        i += 1
 
                     #message_back = "How are you?"
                     #if message_text == "Hi":
@@ -42,7 +43,6 @@ def handle_messages():
 
 
                     #create another class that can handle how to send messages? 
-
                     send_message(sender_id, sum) #sends back a message 
 
                 if messaging_event.get("delivery"):
