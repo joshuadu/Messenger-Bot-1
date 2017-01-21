@@ -32,7 +32,7 @@ def handle_messages():
                     message_text = messaging_event["message"]["text"]
 
                     message_back = "How are you?"
-                    if message_text = "Hi":
+                    if message_text == "Hi":
                         message_back = "Hello" + sender_id
 
 
