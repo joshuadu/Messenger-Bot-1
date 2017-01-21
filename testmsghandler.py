@@ -17,8 +17,7 @@ class Handler:
 		symbols = '^*()/+-'
 		formula = [(x,self.text.index(x)) for x in self.text if x in string.digits+symbols]
 		result = eval(''.join(x[0] for x in formula), {'__builtins__':None})
-		return result
-
+		return "The answer to " + ''.join(x[0] for x in formula) + " is " + str(result)
 
 	def process(self):
 		nums = [int(s) for s in self.text.split() if s.isdigit()]
@@ -29,4 +28,5 @@ class Handler:
 
 	def __init__(self, str):
 		self.text = str
+
 
