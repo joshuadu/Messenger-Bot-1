@@ -12,7 +12,7 @@ class Handler:
 		return answer
 
 	def process(self):
-		self.sum_from_text()
+		return self.sum_from_text()
 
 	def __init__(self, str):
 		self.text = str
