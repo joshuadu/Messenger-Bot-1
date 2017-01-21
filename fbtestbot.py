@@ -31,7 +31,14 @@ def handle_messages():
                     recipient_id = messaging_event["recipient"]["id"]
                     message_text = messaging_event["message"]["text"]
 
-                    send_message(sender_id, "Hello Joshua Du")
+                    message_back = "How are you?"
+                    if message_text = "Hi":
+                        message_back = "Hello" + sender_id
+
+
+                    #create another class that can handle how to send messages? 
+
+                    send_message(sender_id, message_back) #sends back a message 
 
                 if messaging_event.get("delivery"):
                     pass
