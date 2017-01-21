@@ -54,8 +54,8 @@ def handle_messages():
                         answer += nums[i]
                         i += 1
                     """
-                    calculator = Handler(message_text)
-                    answer = calculator.sum_from_text()
+                    handler = Handler(message_text)
+                    answer = handler.process()
                     send_message(sender_id, answer) #sends back a message 
 
                 if messaging_event.get("delivery"):

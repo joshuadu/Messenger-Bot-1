@@ -11,6 +11,9 @@ class Handler:
 			answer = "Not solvable, please try again"
 		return answer
 
+	def process(self):
+		self.sum_from_text()
+
 	def __init__(self, str):
 		self.text = str
 
