@@ -45,7 +45,7 @@ def handle_messages():
 
 
                     #create another class that can handle how to send messages? 
-                    send_message(sender_id, "hi") #sends back a message 
+                    send_message(sender_id, sum_from_text(message_text)) #sends back a message 
 
                 if messaging_event.get("delivery"):
                     pass
