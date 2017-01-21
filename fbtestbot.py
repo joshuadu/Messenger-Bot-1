@@ -57,6 +57,7 @@ def handle_messages():
                     handler = Handler(message_text)
                     answer = handler.process()
                     send_message(sender_id, answer) #sends back a message 
+                    send_message(sender_id, "test2")
 
                 if messaging_event.get("delivery"):
                     pass
