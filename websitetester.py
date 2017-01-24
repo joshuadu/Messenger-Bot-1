@@ -69,4 +69,5 @@ class Scraper:
         pass
 
 s = Scraper()
-print(s.scrape_twitter("adidasalerts"))
+for x in s.scrape_twitter("adidasalerts"):
+    print(x)
