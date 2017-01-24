@@ -66,7 +66,8 @@ class Scraper:
 
     def __init__(self):
         pass
-
+'''
 s = Scraper()
 for x in s.scrape_twitter("adidasalerts"):
     print(x)
+'''
