@@ -5,7 +5,7 @@ import os
 import json
 from Credentials import *
 from testmsghandler import *
-#from websitetester import *
+from websitetester import *
 
 app = Flask(__name__)
 
@@ -56,11 +56,11 @@ def handle_messages():
                         i += 1
                     """
                     handler = Handler(message_text)
-                    scraper = Scraper()
-                    tweets = scraper.scrape_twitter(message_text)
+                    #scraper = Scraper()
+                    #tweets = scraper.scrape_twitter(message_text)
                     answer = handler.process()
-                    for tweet in tweets:
-                        send_message(sender_id, tweet) #sends back a message 
+                    #for tweet in tweets:
+                        #send_message(sender_id, tweet) #sends back a message 
                     send_message(sender_id, answer)
 
                 if messaging_event.get("delivery"):
