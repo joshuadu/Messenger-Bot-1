@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup, NavigableString
-from urllib.request import urlopen
-import requests
+from urllib2 import urlopen, Request
 import random
 import time
 
